@@ -313,7 +313,7 @@ class ScalaLexer(RegexLexer):
             (r'[0-9]+([eE][+-]?[0-9]+)[fFdD]?', Number.Float),
             (r'[0-9]+[lL]', Number.Integer.Long),
             (r'[0-9]+', Number.Integer),
-            (r'""".*?"""(?!")', String),
+            (r'""".*?\n.*?"""(?!")', String),
             (r'"(\\\\|\\"|[^"])*"', String),
             (r"(')(\\.)(')", bygroups(String.Char, String.Escape, String.Char)),
             (r"'[^\\]'|'\\u[0-9a-fA-F]{4}'", String.Char),
